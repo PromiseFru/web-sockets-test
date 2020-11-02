@@ -10,6 +10,9 @@ app.get('/', (req, res) => {
 
 io.on('connection', socket => {
     console.log('Client connected');
+    socket.on('chat message', (msg) => {
+        console.log(msg);
+    })
 });
 
 http.listen(port, console.log(`Server started on port ${port}`));
