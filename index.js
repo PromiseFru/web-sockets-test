@@ -4,6 +4,8 @@ const http = require('http').createServer(app);
 var io = require('socket.io')(http);
 const port = 3000;
 
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 })
