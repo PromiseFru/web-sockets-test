@@ -8,11 +8,15 @@
 </head>
 
 <body>
-    <ul id="messages"></ul>
-    <form action="">
-        <input type="text" id="chat">
-        <input type="submit">
-    </form>
+    <div class="row">
+        <div class="col-md-3 mx-auto mt-3">
+            <ul style="height: 500px;" class="border" id="messages"></ul>
+            <form action="" class="form-group">
+                <input type="text" class="form-control" id="chat">
+                <input type="submit" class="btn btn-primary form-control mt-3" value="Send">
+            </form>
+        </div>
+    </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
